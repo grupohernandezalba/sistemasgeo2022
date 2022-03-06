@@ -27,12 +27,12 @@
     {
         "nombre" : "Arturo",
         "apellidos" : "Vallejo González",
-        "participaciones" : 0
+        "participaciones" : 2
     },
     {
         "nombre" : "Christian Axel",
         "apellidos" : "Serrano Sandoval",
-        "participaciones" : 1
+        "participaciones" : 2
     },
     {
         "nombre" : "Cruz Eduardo",
@@ -57,7 +57,7 @@
     {
         "nombre" : "Francisco",
         "apellidos" : "Salazar Ruiz",
-        "participaciones" : 0
+        "participaciones" : 1
     },
     {
         "nombre" : "Hugo Rafael",
@@ -67,7 +67,7 @@
     {
         "nombre" : "Iván Alejandro",
         "apellidos" : "Castillo Flores",
-        "participaciones" : 0
+        "participaciones" : 1
     },
     {
         "nombre" : "Javier Antonio",
@@ -107,7 +107,7 @@
     {
         "nombre" : "Juana Yareli",
         "apellidos" : "Ramírez Bertadillo",
-        "participaciones" : 0
+        "participaciones" : 1
     },
     {
         "nombre" : "Luis Francisco",
@@ -127,7 +127,7 @@
     {
         "nombre" : "Mariela",
         "apellidos" : "Rocha Corona",
-        "participaciones" : 0
+        "participaciones" : 2
     },
     {
         "nombre" : "Mauricio Miguel",
