@@ -2,7 +2,7 @@
     {
         "nombre" : "Alan Emiliano",
         "apellidos" : "Núñez Rodríguez",
-        "participaciones" : 0
+        "participaciones" : 1
     },
     {
         "nombre" : "Alan Marvin",
@@ -47,12 +47,12 @@
     {
         "nombre" : "Diana",
         "apellidos" : "Bojorquez Soto",
-        "participaciones" : 0
+        "participaciones" : 2
     },
     {
         "nombre" : "Erick Gilberto",
         "apellidos" : "León Pérez",
-        "participaciones" : 0
+        "participaciones" : 1
     },
     {
         "nombre" : "Francisco",
@@ -62,7 +62,7 @@
     {
         "nombre" : "Hugo Rafael",
         "apellidos" : "Angeles Sánchez",
-        "participaciones" : 0
+        "participaciones" : 2
     },
     {
         "nombre" : "Iván Alejandro",
@@ -72,7 +72,7 @@
     {
         "nombre" : "Javier Antonio",
         "apellidos" : "Hernández Barragán",
-        "participaciones" : 0
+        "participaciones" : 1
     },
     {
         "nombre" : "Jazael Hiram",
@@ -92,7 +92,7 @@
     {
         "nombre" : "José Roberto",
         "apellidos" : "Macías García",
-        "participaciones" : 0
+        "participaciones" : 1
     },
     {
         "nombre" : "José Rubén",
@@ -117,12 +117,12 @@
     {
         "nombre" : "Luis Mario",
         "apellidos" : "González Luna",
-        "participaciones" : 0
+        "participaciones" : 1
     },
     {
         "nombre" : "Manuel Humberto",
         "apellidos" : "Villegas Rodríguez",
-        "participaciones" : 0
+        "participaciones" : 1
     },
     {
         "nombre" : "Mariela",
@@ -142,12 +142,12 @@
     {
         "nombre" : "Maximiliano",
         "apellidos" : "García Acosta",
-        "participaciones" : 0
+        "participaciones" : 1
     },
     {
         "nombre" : "Omar Uriel",
         "apellidos" : "Flores Nuñez",
-        "participaciones" : 0
+        "participaciones" : 1
     },
     {
         "nombre" : "Paola Yanet",

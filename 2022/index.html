@@ -49,11 +49,15 @@
                 html = '';
                 let contador = 0;
                 alumnos.forEach( function(alumno) {
+
+                        estado = 'text-success';
+                        if(!alumno.participaciones)
+                            estado = 'text-danger';
     
                         html += `
                             <div class="col-6 col-md-1 m-md-1 text-center animated zoomIn wow" id="alumno${contador}">     
                                 <img class="border border-white hvr-grow" src="imagenes/${ contador + 1 }.webp" width="100px" alt="${ alumno.nombre }">
-                                <p>${ contador+1 }.- ${ alumno.nombre } ${ alumno.apellidos } <strong>(${ alumno.participaciones })</strong></p>               
+                                <p>${ contador+1 }.- ${ alumno.nombre } ${ alumno.apellidos } <strong class='${ estado }' >(${ alumno.participaciones })</strong></p>               
                             </div>       
                         `;                        
                     
@@ -95,7 +99,8 @@
 
             arregloAlumnos = arregloAlumnos.filter(function(alumno) { 
                 //return alumno.id != alumnoElegido.id; 
-                return alumno.participaciones != 1; 
+                console.log('FILTRO:' + alumno.nombre);
+                return alumno.participaciones < 1; 
             }); 
 
             console.log(arregloAlumnos);
