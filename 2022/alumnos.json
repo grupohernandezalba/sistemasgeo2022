@@ -7,7 +7,7 @@
     {
         "nombre" : "Alan Marvin",
         "apellidos" : "Guzmán Flores",
-        "participaciones" : 0
+        "participaciones" : 1
     },
     {
         "nombre" : "Alejandro",
@@ -17,12 +17,12 @@
     {
         "nombre" : "Alfonso",
         "apellidos" : "Peña Mendoza",
-        "participaciones" : 0
+        "participaciones" : 1
     },
     {
         "nombre" : "Andrés",
         "apellidos" : "Fernández González",
-        "participaciones" : 0
+        "participaciones" : 1
     },
     {
         "nombre" : "Arturo",
@@ -37,7 +37,7 @@
     {
         "nombre" : "Cruz Eduardo",
         "apellidos" : "Aguado Negrete",
-        "participaciones" : 0
+        "participaciones" : 1
     },
     {
         "nombre" : "Daniel",
@@ -47,7 +47,7 @@
     {
         "nombre" : "Diana",
         "apellidos" : "Bojorquez Soto",
-        "participaciones" : 0
+        "participaciones" : 1
     },
     {
         "nombre" : "Erick Gilberto",
@@ -67,7 +67,7 @@
     {
         "nombre" : "Iván Alejandro",
         "apellidos" : "Castillo Flores",
-        "participaciones" : 0
+        "participaciones" : 1
     },
     {
         "nombre" : "Javier Antonio",
@@ -82,12 +82,12 @@
     {
         "nombre" : "Jeremy Uriel",
         "apellidos" : "Franco Núñez",
-        "participaciones" : 0
+        "participaciones" : 1
     },
     {
         "nombre" : "Jorge Ismael",
         "apellidos" : "Vera Huerta",
-        "participaciones" : 0
+        "participaciones" : 1
     },
     {
         "nombre" : "José Roberto",
@@ -117,7 +117,7 @@
     {
         "nombre" : "Luis Mario",
         "apellidos" : "González Luna",
-        "participaciones" : 0
+        "participaciones" : 2
     },
     {
         "nombre" : "Manuel Humberto",
