@@ -47,15 +47,10 @@
             </div>
         </div>
     </div>
-
-
     <script>
-
         var coordenadas = {
                     lat: -31.563910, lng: 147.154312
             }
-
-
         var localidades = [
             {lat: -31.563910, lng: 147.154312},
             {lat: -33.718234, lng: 150.363181},
@@ -81,9 +76,6 @@
             {lat: -42.735258, lng: 147.438000},
             {lat: -43.999792, lng: 170.463352}
         ];
-
-
-            
         function iniciaMapa() {
             var map = new google.maps.Map(
             document.getElementById('mapa'),
@@ -92,47 +84,31 @@
                     zoom: 3
                 }
             );
-
             var labels = 'ABCDEFGHIJKLMNOPQRSTUVWXYZ';
-
             var marcadores = [];
-
             var cuenta = 1;
-
             localidades.forEach( localidad => {
-
-                console.log(localidad);
-
                 let marcador = new google.maps.Marker({
                     map : map,
                     position: localidad,
                     label: labels[ cuenta % labels.length ]
                 });
-
                 marcadores.push(marcador);
-
                 cuenta++;
-
             });
-
             var makerCluster = new MarkerClusterer(map, marcadores, {
                 imagePath : 'https://developers.google.com/maps/documentation/javascript/examples/markerclusterer/m',
                 maxZoom: 10
-
             });
-
             document.getElementById('btnroadmap').addEventListener('click', function(){
                 map.setMapTypeId('roadmap');
             });
-
             document.getElementById('btnsatellite').addEventListener('click', function(){
                 map.setMapTypeId('satellite');
             });
-
             document.getElementById('btnhybrid').addEventListener('click', function(){
                 map.setMapTypeId('hybrid');
             });
-
             document.getElementById('btnterrain').addEventListener('click', function(){
                 map.setMapTypeId('terrain');
             });

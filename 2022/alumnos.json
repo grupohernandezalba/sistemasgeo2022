@@ -2,12 +2,12 @@
     {
         "nombre" : "Alan Emiliano",
         "apellidos" : "Núñez Rodríguez",
-        "participaciones" : 0
+        "participaciones" : 2
     },
     {
         "nombre" : "Alan Marvin",
         "apellidos" : "Guzmán Flores",
-        "participaciones" : 1
+        "participaciones" : 3
     },
     {
         "nombre" : "Alejandro",
@@ -27,12 +27,12 @@
     {
         "nombre" : "Arturo",
         "apellidos" : "Vallejo González",
-        "participaciones" : 0
+        "participaciones" : 1
     },
     {
         "nombre" : "Christian Axel",
         "apellidos" : "Serrano Sandoval",
-        "participaciones" : 0
+        "participaciones" : 2
     },
     {
         "nombre" : "Cruz Eduardo",
@@ -47,7 +47,7 @@
     {
         "nombre" : "Diana",
         "apellidos" : "Bojorquez Soto",
-        "participaciones" : 1
+        "participaciones" : 2
     },
     {
         "nombre" : "Erick Gilberto",
@@ -57,12 +57,12 @@
     {
         "nombre" : "Francisco",
         "apellidos" : "Salazar Ruiz",
-        "participaciones" : 0
+        "participaciones" : 1
     },
     {
         "nombre" : "Hugo Rafael",
         "apellidos" : "Angeles Sánchez",
-        "participaciones" : 0
+        "participaciones" : 1
     },
     {
         "nombre" : "Iván Alejandro",
@@ -87,7 +87,7 @@
     {
         "nombre" : "Jorge Ismael",
         "apellidos" : "Vera Huerta",
-        "participaciones" : 1
+        "participaciones" : 2
     },
     {
         "nombre" : "José Roberto",
@@ -107,12 +107,12 @@
     {
         "nombre" : "Juana Yareli",
         "apellidos" : "Ramírez Bertadillo",
-        "participaciones" : 0
+        "participaciones" : 1
     },
     {
         "nombre" : "Luis Francisco",
         "apellidos" : "Ponce Avilés",
-        "participaciones" : 0
+        "participaciones" : 2
     },
     {
         "nombre" : "Luis Mario",
@@ -127,7 +127,7 @@
     {
         "nombre" : "Mariela",
         "apellidos" : "Rocha Corona",
-        "participaciones" : 0
+        "participaciones" : 2
     },
     {
         "nombre" : "Mauricio Miguel",
@@ -147,12 +147,12 @@
     {
         "nombre" : "Omar Uriel",
         "apellidos" : "Flores Nuñez",
-        "participaciones" : 0
+        "participaciones" : 1
     },
     {
         "nombre" : "Paola Yanet",
         "apellidos" : "Villa Rojo",
-        "participaciones" : 0
+        "participaciones" : 1
     },
     {
         "nombre" : "Víctor Manuel",
