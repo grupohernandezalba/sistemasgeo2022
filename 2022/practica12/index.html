@@ -110,15 +110,20 @@
 
             var mapa3 = new google.maps.Map(document.getElementById('mapa3'),propiedades);
 
-            var infowindow = new google.maps.InfoWindow({
-                content : 'Cambia el zoom',
-                position : coordenadas
-            });
 
-            infowindow.open(mapa3);
 
             mapa3.addListener('zoom_changed', function(){
-                infowindow.setContent('Zoom' + mapa3.getZoom());
+
+                var infowindow = new google.maps.InfoWindow({
+                    content : 'Cambia el zoom',
+                    position : coordenadas
+                });
+
+                infowindow.open(mapa3);
+
+                nivelZoom = mapa3.getZoom();
+                infowindow.setContent('Zoom:'+nivelZoom);
+
             });
 
 
