@@ -1,10 +1,8 @@
-<!DOCTYPE html>
 <html lang="en">
 <head>
-  <meta charset="UTF-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>Shapes</title>
-
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Geocoding</title>
 
     <!-- Bootstrap -->
     <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css" integrity="sha384-ggOyR0iXCbMQv3Xipma34MD+dH/1fQ784/j6cY/iJTQUOhcWr7x9JvoRxT2MZw1T" crossorigin="anonymous">
@@ -16,127 +14,161 @@
             padding: 0px;
         }
 
-        #map {
+        #map, #map2 {
             width: 100%;
-            height: 500px;
+            height: 340px;
         }
     </style>
-
 </head>
 <body>
 
-
-  <div class="container-fluid">
-      <div class="row">
-        <div class="col-12 col-md-6">
-            <div id="map"></div>
+    <div class="container-fluid m-2 text-center">
+        <div class="row">
+            <div class="col-12">
+                <h1>Geocoding y reverse geocoding</h1>
+            </div>
         </div>
-        <div class="col-12 col-md-6">
-          <h1>Ciudades de México más pobladas</h1>
-          <div id="datos"></div>
+        <div class="row">
+            <div class="col-6">
+                <div id="map"></div>
+                <input type="text" name="domicilio" id="domicilio" class="form-control" autocomplete="off" placeholder="Ingrese un domicilio o un lugar">
+                <button class="btn btn-primary" id="btnBuscar">Buscar geocoding</button>
+            </div>
+            <div class="col-6">
+                <div id="resultados"></div>
+            </div>
         </div>
-      </div>
-  </div>
-  
+        <div class="row">
+            <div class="col-6">
+                <div id="map2"></div>
+                <input type="text" name="latitudlongitud" id="latitudlongitud" class="form-control" autocomplete="off" placeholder="Ingrese un domicilio o un lugar">
+                <button class="btn btn-primary" id="btnBuscar2">Buscar reversa geocoding</button>
+            </div>
+            <div class="col-6">
+                <div id="resultados2"></div>
+            </div>
+        </div>
+    </div>
+    
 
-  <script>
-
-    function iniciaMapa(){
-
-
-      var coordenadas = {  lat: 21.152639, lng:  -101.711598 };
-
-      var propiedades = {
-          center: coordenadas,
-          zoom: 6,
-          mapTypeId: 'terrain'
-      };
-
-      map = new google.maps.Map(document.getElementById('map'),propiedades);
+    <script>
 
 
+        var map;
 
 
-
-      fetch('municipios.json')
-      .then( function(response){
-          response.json().then( function(municipios){
-            
-            
-
-            var datos = document.getElementById('datos');
-
-            var tabla = `
-            <table class="table table-striped">
-              <thead>
-                <tr>
-                  <th scope="col">Municipio</th>
-                  <th scope="col">Estado</th>
-                  <th scope="col">Habitantes</th>
-                </tr>
-              </thead>
-              <tbody>
-            `;
+        function iniciaMapa(){
 
 
-            var coordenadasVuelos=[];
+            var coordenadas = {  lat: 21.152639, lng:  -101.711598 };
 
-            municipios.forEach( municipio => {
+            var propiedades = {
+                center: coordenadas,
+                zoom: 12
+            };
+
+            map = new google.maps.Map(document.getElementById('map'),propiedades);
+
+            var btnBuscar = document.getElementById('btnBuscar');
+
+            btnBuscar.addEventListener('click', function(){
+
+                var domicilio = document.getElementById('domicilio').value;
+                console.log(domicilio);
+
+                geocoder = new google.maps.Geocoder();
+
+                geocoder.geocode( { 'address': domicilio, region: 'Guanajuato' }, function( results, status ){
+                    
+                    if(status == 'OK')
+                    {
+                        console.log(results);
+                        var resultados = document.getElementById('resultados');
+                        resultados.innerHTML = `
+                            <p><strong>Coordenadas:</strong> ${  results[0].geometry.location }</p>
+                            <p><strong>Detalles:</strong> ${ results[0].formatted_address} </p>
+                        `;
+
+                        map.setCenter(results[0].geometry.location);
+                        var marker = new google.maps.Marker({
+                            map: map,
+                            position: results[0].geometry.location
+
+                        });
 
 
-              coordenadasVuelos.push(municipio.coordenadas);
+                    }
+                    else
+                    {
+                        alert('Geocode no se ejecuto con éxito.');
+                    }
+                    
 
-              var municipioCirculo = new google.maps.Circle({
-                strokeColor: '#FF0000',
-                strokeOpacity : 0.8,
-                strokeWeight : 2,
-                fillColor: '#FF0000',
-                fillOpacity : 0.35,
-                map: map,
-                center: municipio.coordenadas,
-                radius: Math.sqrt(municipio.habitantes) * 10
-              });
-
-              tabla += `
-                <tr>
-                  <th scope="row">${ municipio.nombre}</th>
-                  <td>${ municipio.estado}</td>
-                  <td>${ municipio.habitantes}</td>
-                </tr>
-              `;
-
+                });
 
             });
 
-            var vuelosTrazo = new google.maps.Polyline({
-              path: coordenadasVuelos,
-              geodesic:true,
-              strokeColor: '#CCCCCC',
-              strokeOpacity: 0.5,
-              strokeColor: 1
+
+
+            map2 = new google.maps.Map(document.getElementById('map2'),propiedades);
+            var btnBuscar2 = document.getElementById('btnBuscar2');
+            btnBuscar2.addEventListener('click', function(){
+
+                var latitudlongitud = document.getElementById('latitudlongitud').value;
+
+                var latlngStr = latitudlongitud.split(',',2);
+
+                var latlng = {  lat: parseFloat(latlngStr[0]), lng: parseFloat(latlngStr[1])};
+
+                console.log(latlng);
+
+                geocoder = new google.maps.Geocoder();
+
+                geocoder.geocode({ 'location': latlng }, function(results, status){
+
+                    if(status == 'OK')
+                    {
+
+
+                        var resultados2 = document.getElementById('resultados2');
+                        resultados2.innerHTML = `
+                            <p><strong>Detalles:</strong> ${ results[0].formatted_address} </p>
+                        `;
+
+                        map2.setCenter(results[0].geometry.location);
+                        var marker = new google.maps.Marker({
+                            map: map2,
+                            position: results[0].geometry.location
+                        });
+
+                    }
+                    else
+                    {
+                        alert('Geocode no se ejecuto con éxito.');
+                    }
+
+                });
+ 
+
             });
 
-            vuelosTrazo.setMap(map);
 
-            tabla +=`  
-                </tbody>
-                </table>`;
+        }
 
-            datos.innerHTML = tabla;
+ 
+ 
 
-          });
-      });
+ 
 
+ 
 
-    }
+    </script>
 
 
-  </script>
-
-  <script src="https://code.jquery.com/jquery-3.2.1.slim.min.js" integrity="sha384-KJ3o2DKtIkvYIK3UENzmM7KCkRr/rE9/Qpg6aAZGJwFDMVNA/GpGFF93hXpG5KkN" crossorigin="anonymous"></script>
-  <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.12.9/umd/popper.min.js" integrity="sha384-ApNbgh9B+Y1QKtv3Rn7W3mgPxhU9K/ScQsAP7hUibX39j7fakFPskvXusvfa0b4Q" crossorigin="anonymous"></script>
-  <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/js/bootstrap.min.js" integrity="sha384-JZR6Spejh4U02d8jOt6vLEHfe/JQGiRRSQQxSfFWpi1MquVdAyjUar5+76PVCmYl" crossorigin="anonymous"></script>
-
-  <script src="https://maps.googleapis.com/maps/api/js?key=AIzaSyCMrQgga-C5zCuZLTVk2MPVzX7naqKZXZU&libraries=places&callback=iniciaMapa" async defer></script>
+    <script src="https://code.jquery.com/jquery-3.2.1.slim.min.js" integrity="sha384-KJ3o2DKtIkvYIK3UENzmM7KCkRr/rE9/Qpg6aAZGJwFDMVNA/GpGFF93hXpG5KkN" crossorigin="anonymous"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.12.9/umd/popper.min.js" integrity="sha384-ApNbgh9B+Y1QKtv3Rn7W3mgPxhU9K/ScQsAP7hUibX39j7fakFPskvXusvfa0b4Q" crossorigin="anonymous"></script>
+    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/js/bootstrap.min.js" integrity="sha384-JZR6Spejh4U02d8jOt6vLEHfe/JQGiRRSQQxSfFWpi1MquVdAyjUar5+76PVCmYl" crossorigin="anonymous"></script>
+    
+    <script src="https://maps.googleapis.com/maps/api/js?key=AIzaSyCMrQgga-C5zCuZLTVk2MPVzX7naqKZXZU&libraries=places&callback=iniciaMapa" async defer></script>
 </body>
 </html>
