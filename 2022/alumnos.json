@@ -12,7 +12,7 @@
     {
         "nombre" : "Alejandro",
         "apellidos" : "Gutiérrez Bustos",
-        "participaciones" : 0
+        "participaciones" : 1
     },
     {
         "nombre" : "Alfonso",
@@ -32,7 +32,7 @@
     {
         "nombre" : "Christian Axel",
         "apellidos" : "Serrano Sandoval",
-        "participaciones" : 2
+        "participaciones" : 3
     },
     {
         "nombre" : "Cruz Eduardo",
@@ -47,12 +47,12 @@
     {
         "nombre" : "Diana",
         "apellidos" : "Bojorquez Soto",
-        "participaciones" : 2
+        "participaciones" : 3
     },
     {
         "nombre" : "Erick Gilberto",
         "apellidos" : "León Pérez",
-        "participaciones" : 0
+        "participaciones" : 1
     },
     {
         "nombre" : "Francisco",
@@ -72,12 +72,12 @@
     {
         "nombre" : "Javier Antonio",
         "apellidos" : "Hernández Barragán",
-        "participaciones" : 0
+        "participaciones" : 1
     },
     {
         "nombre" : "Jazael Hiram",
         "apellidos" : "Rivas Manzano",
-        "participaciones" : 0
+        "participaciones" : 1
     },
     {
         "nombre" : "Jeremy Uriel",
@@ -92,7 +92,7 @@
     {
         "nombre" : "José Roberto",
         "apellidos" : "Macías García",
-        "participaciones" : 0
+        "participaciones" : 1
     },
     {
         "nombre" : "José Rubén",
@@ -102,7 +102,7 @@
     {
         "nombre" : "Juan Antonio",
         "apellidos" : "Pérez Medina",
-        "participaciones" : 0
+        "participaciones" : 1
     },
     {
         "nombre" : "Juana Yareli",
@@ -122,27 +122,27 @@
     {
         "nombre" : "Manuel Humberto",
         "apellidos" : "Villegas Rodríguez",
-        "participaciones" : 0
+        "participaciones" : 1
     },
     {
         "nombre" : "Mariela",
         "apellidos" : "Rocha Corona",
-        "participaciones" : 2
+        "participaciones" : 3
     },
     {
         "nombre" : "Mauricio Miguel",
         "apellidos" : "Ortiz Amaro",
-        "participaciones" : 0
+        "participaciones" : 1
     },
     {
         "nombre" : "Mauricio",
         "apellidos" : "Ramírez Castro",
-        "participaciones" : 0
+        "participaciones" : 1
     },
     {
         "nombre" : "Maximiliano",
         "apellidos" : "García Acosta",
-        "participaciones" : 0
+        "participaciones" : 1
     },
     {
         "nombre" : "Omar Uriel",
@@ -157,6 +157,6 @@
     {
         "nombre" : "Víctor Manuel",
         "apellidos" : "Nevárez Herrera",
-        "participaciones" : 0
+        "participaciones" : 1
     }
 ]
