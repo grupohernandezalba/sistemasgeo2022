@@ -1,0 +1,162 @@
+[
+    {
+        "nombre" : "Alan Emiliano",
+        "apellidos" : "Núñez Rodríguez",
+        "participaciones" : 2
+    },
+    {
+        "nombre" : "Alan Marvin",
+        "apellidos" : "Guzmán Flores",
+        "participaciones" : 3
+    },
+    {
+        "nombre" : "Alejandro",
+        "apellidos" : "Gutiérrez Bustos",
+        "participaciones" : 1
+    },
+    {
+        "nombre" : "Alfonso",
+        "apellidos" : "Peña Mendoza",
+        "participaciones" : 1
+    },
+    {
+        "nombre" : "Andrés",
+        "apellidos" : "Fernández González",
+        "participaciones" : 1
+    },
+    {
+        "nombre" : "Arturo",
+        "apellidos" : "Vallejo González",
+        "participaciones" : 1
+    },
+    {
+        "nombre" : "Christian Axel",
+        "apellidos" : "Serrano Sandoval",
+        "participaciones" : 3
+    },
+    {
+        "nombre" : "Cruz Eduardo",
+        "apellidos" : "Aguado Negrete",
+        "participaciones" : 1
+    },
+    {
+        "nombre" : "Daniel",
+        "apellidos" : "Zamudio Muñoz",
+        "participaciones" : 0
+    },
+    {
+        "nombre" : "Diana",
+        "apellidos" : "Bojorquez Soto",
+        "participaciones" : 3
+    },
+    {
+        "nombre" : "Erick Gilberto",
+        "apellidos" : "León Pérez",
+        "participaciones" : 1
+    },
+    {
+        "nombre" : "Francisco",
+        "apellidos" : "Salazar Ruiz",
+        "participaciones" : 1
+    },
+    {
+        "nombre" : "Hugo Rafael",
+        "apellidos" : "Angeles Sánchez",
+        "participaciones" : 1
+    },
+    {
+        "nombre" : "Iván Alejandro",
+        "apellidos" : "Castillo Flores",
+        "participaciones" : 1
+    },
+    {
+        "nombre" : "Javier Antonio",
+        "apellidos" : "Hernández Barragán",
+        "participaciones" : 1
+    },
+    {
+        "nombre" : "Jazael Hiram",
+        "apellidos" : "Rivas Manzano",
+        "participaciones" : 1
+    },
+    {
+        "nombre" : "Jeremy Uriel",
+        "apellidos" : "Franco Núñez",
+        "participaciones" : 1
+    },
+    {
+        "nombre" : "Jorge Ismael",
+        "apellidos" : "Vera Huerta",
+        "participaciones" : 2
+    },
+    {
+        "nombre" : "José Roberto",
+        "apellidos" : "Macías García",
+        "participaciones" : 1
+    },
+    {
+        "nombre" : "José Rubén",
+        "apellidos" : "Delgado Pérez",
+        "participaciones" : 0
+    },
+    {
+        "nombre" : "Juan Antonio",
+        "apellidos" : "Pérez Medina",
+        "participaciones" : 1
+    },
+    {
+        "nombre" : "Juana Yareli",
+        "apellidos" : "Ramírez Bertadillo",
+        "participaciones" : 1
+    },
+    {
+        "nombre" : "Luis Francisco",
+        "apellidos" : "Ponce Avilés",
+        "participaciones" : 2
+    },
+    {
+        "nombre" : "Luis Mario",
+        "apellidos" : "González Luna",
+        "participaciones" : 2
+    },
+    {
+        "nombre" : "Manuel Humberto",
+        "apellidos" : "Villegas Rodríguez",
+        "participaciones" : 1
+    },
+    {
+        "nombre" : "Mariela",
+        "apellidos" : "Rocha Corona",
+        "participaciones" : 3
+    },
+    {
+        "nombre" : "Mauricio Miguel",
+        "apellidos" : "Ortiz Amaro",
+        "participaciones" : 1
+    },
+    {
+        "nombre" : "Mauricio",
+        "apellidos" : "Ramírez Castro",
+        "participaciones" : 1
+    },
+    {
+        "nombre" : "Maximiliano",
+        "apellidos" : "García Acosta",
+        "participaciones" : 1
+    },
+    {
+        "nombre" : "Omar Uriel",
+        "apellidos" : "Flores Nuñez",
+        "participaciones" : 1
+    },
+    {
+        "nombre" : "Paola Yanet",
+        "apellidos" : "Villa Rojo",
+        "participaciones" : 1
+    },
+    {
+        "nombre" : "Víctor Manuel",
+        "apellidos" : "Nevárez Herrera",
+        "participaciones" : 1
+    }
+]
