@@ -8,6 +8,10 @@
 		<?php
 		if(isset($_GET["mensaje"]))
 		{
+			if($_GET["mensaje"]=="hacerpedido")
+				echo "<p class='text-center'>Para hacer un pedido debes de ingresar con tu usuario y contraseña </p>";
+			else
+			{
 		?>
 			<div class="row">
 				<div class="col-12">
@@ -17,7 +21,9 @@
 					</div>
 				</div>
 			</div>
-		<?php } ?>
+		<?php
+			} 
+		} ?>
 		<div class="row">
 			<div class="col-12 p-3 p-md-5">
 				<form id="formulario" class="ingresa" action="?seccion=acceso&amp;accion=valida" method="post">

@@ -53,6 +53,12 @@
             case "acceso":
                 include("acceso/index.php");
                 break;
+            case "productos":
+                include("productos/index.php");
+                break;
+            case "pedidos":
+                include("pedidos/index.php");
+                break;
         }
  
         include("piedepagina/index.php");

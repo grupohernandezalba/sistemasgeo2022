@@ -19,10 +19,25 @@
             Productos
           </a>
           <ul class="dropdown-menu" aria-labelledby="navbarDropdown">
-            <li><a class="dropdown-item" href="#">Pizzas</a></li>
-            <li><a class="dropdown-item" href="#">Pastas</a></li>
-            <li><a class="dropdown-item" href="#">Bebidas</a></li>
-            <li><a class="dropdown-item" href="#">Postres</a></li>
+            <?php
+
+              $consulta  = " SELECT * FROM tb_categorias ";
+              $query = $conn->prepare($consulta);
+              $query->execute();
+              while($registro = $query->fetch()){
+                
+                $consulta2  = " SELECT COUNT(*) as total FROM tb_productos 
+                                WHERE fk_clave_cat = ? ";
+                $query2 = $conn->prepare($consulta2);
+                $query2->bindParam(1,$registro["pk_clave_cat"]);
+                $query2->execute();
+                $registro2 = $query2->fetch();
+
+           ?>
+            <li><a class="dropdown-item" href="?seccion=productos&accion=lista&idCategoria=<?=$registro["pk_clave_cat"]?>"><?=$registro["txt_nombre_cat"]?> (<?=$registro2["total"]?>)</a></li>
+           <?php
+              }
+            ?>
           </ul>
         </li>
         <li class="nav-item">
@@ -52,8 +67,8 @@
         }
         ?>
       </ul>
-      <form class="d-flex">
-        <input class="form-control me-2" type="search" placeholder="buscar..." aria-label="Search">
+      <form class="d-flex" action="?seccion=productos&accion=lista" method="post">
+        <input class="form-control me-2" type="search" name="buscar" placeholder="buscar..." aria-label="Search">
         <button class="btn btn-warning" type="submit">Buscar</button>
       </form>
     </div>
