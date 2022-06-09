@@ -1,4 +1,4 @@
-    <a class="navbar-brand" href="?seccion=inicio">
+    <a href="?seccion=inicio">
       LOGO
     </a>
     <a href="?seccion=inicio">Inicio</a>

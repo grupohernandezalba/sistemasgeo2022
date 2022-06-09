@@ -11,6 +11,24 @@
             case "agregar":
                 include ("agregar.php");
                 break;
+            case "detalle":
+                include ("detalle.php");
+                break;
+            case "borrarProducto":
+                include ("borrarProducto.php");
+                break;
+            case "modificar":
+                include ("modificar.php");
+                break;
+            case "borrarPedido":
+                include ("borrarPedido.php");
+                break;
+            case "confirmar":
+                include ("confirmar.php");
+                break;
+            case "finalizar":
+                include ("finalizar.php");
+                break;
         }
     }
     else

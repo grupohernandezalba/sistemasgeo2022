@@ -1,7 +1,5 @@
 <?php
     $accion = (isset($_GET['accion']) && $_GET['accion']!='') ? $_GET['accion'] : 'ingresar';
-
-
     switch ($accion)
     {
         case "ingresar":

@@ -40,9 +40,16 @@
             ?>
           </ul>
         </li>
-        <li class="nav-item">
-          <a class="nav-link" href="#">Mis pedidos</a>
-        </li>
+        <?php
+        if(isset($_SESSION["id"])) 
+        {
+        ?>
+          <li class="nav-item">
+            <a class="nav-link" href="?seccion=pedidos&accion=lista">Mis pedidos</a>
+          </li>
+        <?php
+        }
+        ?>
         <?php
         if(!isset($_SESSION["id"])) 
         {

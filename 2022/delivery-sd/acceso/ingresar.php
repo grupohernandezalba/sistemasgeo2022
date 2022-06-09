@@ -4,7 +4,7 @@
 			<p>
 				Accesa a nuestro sistema por medio de tu usuario y contraseña
 			</p> 
-			<input type="text" required name="correo" id="correo" class="form-control shadow-sm" placeholder="Usuario"/></div>
+			<input type="text" required name="correo" id="correo" placeholder="Usuario"/></div>
 			<input type="password" required name="contrasena" id="contrasena" class="form-control shadow-sm" placeholder="Contraseña"></div>
 			<button type="submit" class="btn btn-danger hvr-grow">Accesar</button></div>
 		</fieldset>

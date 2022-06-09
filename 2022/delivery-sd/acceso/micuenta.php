@@ -13,9 +13,9 @@ if (isset($_SESSION["id"]))
   <form action="?seccion=acceso&accion=actualizar" id="form1" method="post">
     <fieldset>
           Nombre:
-          <input type="text" required name="nombre" id="nombre" size="80" maxlength="80" value="<?php echo $registro['txt_nombre_usu']; ?>">
+          <input type="text" required name="nombre" id="nombre" size="80" maxlength="80" value="<?=$registro['txt_nombre_usu']; ?>">
           Usuario (Correo electrónico):
-          <input type="email" required name="usuario" id="usuario" value="<?php echo $registro['txt_email_usu']; ?>" />
+          <input type="email" required name="usuario" id="usuario" value="<?=$registro['txt_email_usu']; ?>" />
           Contraseña:
           <input type="password" required name="contrasena" id="contrasena" size="80" maxlength="80" value="<?=$registro['txt_contrasena_usu']?>">
           <button type="submit">Guardar cambios</button>

@@ -18,9 +18,6 @@
     <title>DLS EATS</title>
 
     <link rel="icon" type="image/png" href="imagenes/dlspizza-favicon.png">
-
-    <!-- CSS personalizado -->
-    <link href="css/index.css" rel="stylesheet">
     
 </head>
 <body>
@@ -28,8 +25,6 @@
         $seccion = (isset($_GET['seccion']) && $_GET['seccion'] != '') ? $_GET['seccion'] : 'inicio';
         $accion = (isset($_GET['accion']) && $_GET['accion'] != '') ? $_GET['accion'] : 'lista';
         include("menu/index.php");
-        
-  
         switch ($seccion) {
             case "inicio":
                 include("inicio/index.php");
@@ -45,9 +40,7 @@
                 include("acceso/index.php");
                 break;
         }
- 
         include("piedepagina/index.php");
-
     ?>
 
 

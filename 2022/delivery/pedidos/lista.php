@@ -1,6 +1,6 @@
 <?php
     $idUsuario = $_SESSION["id"];
-    $consulta  = " SELECT * FROM tb_pedidos WHERE fk_clave_usu = ? ";
+    $consulta  = " SELECT * FROM tb_pedidos WHERE fk_clave_usu = ? ORDER BY pk_clave_ped DESC ";
     $query = $conn->prepare($consulta);
     $query->bindParam(1, $idUsuario);
     $query->execute();
@@ -59,13 +59,22 @@
                     <?=$estatus?>
                 </div>
                 <div class="col-12 col-md-4 border p-2">
-                    <button class="btn btn-success">Ver detalle</button>
+                    <a href="?seccion=pedidos&accion=detalle&id=<?=$registro["pk_clave_ped"]?>">
+                        <button class="btn btn-sm btn-success">Ver detalle</button>
+                    </a>
                     <?php
-                        if($registro["num_estatus_ped"]==1)
-                        {
+                    if($registro["num_estatus_ped"]==1)
+                    {
                     ?>
-                        <button class="btn btn-danger">Borrar</button>
-                        <button class="btn btn-primary">Confirmar</button>
+                        <a href="?seccion=pedidos&accion=modificar&id=<?=$registro["pk_clave_ped"]?>">
+                            <button class="btn btn-sm btn-warning">Modificar</button>
+                        </a>
+                        <a href="?seccion=pedidos&accion=borrarPedido&id=<?=$registro["pk_clave_ped"]?>">
+                            <button class="btn btn-sm btn-danger">Borrar</button>
+                        </a>
+                        <a href="?seccion=pedidos&accion=confirmar&id=<?=$registro["pk_clave_ped"]?>">
+                            <button class="btn btn-sm btn-primary">Confirmar</button>
+                        </a>
                     <?php
                     }
                     ?>
